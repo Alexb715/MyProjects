@@ -126,41 +126,46 @@ public class Calculator {
             }
         });
         equalButton.addActionListener(e -> {
+            //Plus Action
 if( action.equals("+")){
     secondNumber = Long.parseLong(screen.getText());
     result = firstnumber + secondNumber;
     firstnumber = 0;
     secondNumber = 0;
     screen.setText(String.valueOf(result));
-}
+}//ends here
+            //minus action
             if( action.equals("-")){
     secondNumber = Long.parseLong(screen.getText());
     result =firstnumber -secondNumber;
     firstnumber = 0;
     secondNumber = 0;
     screen.setText(String.valueOf(result));
-}
+}//ends here
+            //divide action
             if( action.equals("/")){
     secondNumber = Long.parseLong(screen.getText());
     if (secondNumber < 0){
         screen.setText("Math ERROR");
-    }
+    }//checks if second number is bigger than zero 
     if (secondNumber >= 0) {
         result = firstnumber / secondNumber;
         firstnumber = 0;
         secondNumber = 0;
         screen.setText(String.valueOf(result));
     }
-}
+}//ends here 
+            //multplaction action
             if( action.equals("*")){
     secondNumber = Long.parseLong(screen.getText());
     result = firstnumber * secondNumber;
     firstnumber = 0;
     secondNumber = 0;
     screen.setText(String.valueOf(result));
-}
+} //ends here
+            //if they just press equals
             else if (action == "invalid"){
-                screen.setText("error");
+                screen.setText("ERROR");
 
             }
 
